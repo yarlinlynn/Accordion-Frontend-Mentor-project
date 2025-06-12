@@ -9,7 +9,7 @@
     <link 
     rel="icon" 
     type="image/png" 
-    sizes="32x32" href="./images/favicon-32x32.png"
+    sizes="32x32" href="assets/images/favicon-32x32.png"
     />
     
     <title>Accordion Card</title>
@@ -18,15 +18,27 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-gradient h">
+<body class="bg-gradient h-100">
 
-    <div class="container container-bg d-flex align-items-center">
-        <div class="row">
-            <div class="col-12">
-                <!-- images goes here, one for desktop and mobile/tablet -->
-                 <img src="assets/images/illustration-woman-online-mobile.svg" alt="img"/>
-            </div>
-            <div class="col-12">
+    <main class="container-bg spacing p-4 rounded-3"> <!-- d-flex justify-content-center -->
+        <div class="row align-items-md-center"> <!--  -->
+            <section class="col-12 col-md-6 ">
+
+                <div class="position"> <!-- d-flex justify-content-center -->
+                    <img 
+                    class="position-1"
+                    src="assets/images/illustration-woman-online-mobile.svg" 
+                    alt="illustration-woman-online-mobile"/>
+
+                 <!-- background transparent image goes here -->
+                    <img class="img-postion"
+                    src="assets/images/bg-pattern-desktop.svg"
+                    alt="transparent background pattern for desktop" />
+                 
+                </div>
+            </section>
+
+            <section class="col-12 col-md-6">
                 <h1 class="text-center sm-my-2">FAQ</h1>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
@@ -90,10 +102,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
 
-    </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>

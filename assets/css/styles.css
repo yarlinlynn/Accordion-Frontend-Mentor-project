@@ -17,14 +17,38 @@
 /*-----------------------------------*\
   #RESET STYLES
 \*-----------------------------------*/
-.bg-gradient { background: linear-gradient(var(--top-gradient), var(--bottom-gradient)); }
+.bg-gradient { 
+  background: linear-gradient(var(--top-gradient), var(--bottom-gradient)) !important; 
+  background-repeat: no-repeat !important;
+}
+
+.custom-m { margin: 30vh auto; }
 
 .container-bg { background-color: white; }
+
+.h-100 { height: 90vh !important; }
+
+.spacing {
+  width: 80%;
+  margin: 10vh auto 0;
+}
+
+.position { position: relative; }
+
+.position-1 { position: absolute; }
+
+.img-postion {
+  width: 100%;
+  position: relative;
+}
 
 /*-----------------------------------*\
   #IMAGE
 \*-----------------------------------*/
 
+.img-width { width: 200%;}
+
+.align { align-items: center; }
 
 /*-----------------------------------*\
   #ACCORDION
