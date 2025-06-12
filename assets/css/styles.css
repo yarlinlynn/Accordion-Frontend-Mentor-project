@@ -1,0 +1,38 @@
+/*-----------------------------------*\
+  #CUSTOM COLORS
+\*-----------------------------------*/
+:root {
+ 
+  --top-gradient: hsl(273, 75%, 66%);
+  --bottom-gradient: hsl(240, 73%, 65%);
+    
+  --heading-color: hsl(238, 29%, 16%);
+  --main-color: hsl(237, 12%, 33%);
+  --text-color: hsl(240, 6%, 50%);
+  --hover-color: hsl(14, 88%, 65%);
+
+  --divider: hsl(240, 5%, 91%);
+}
+
+/*-----------------------------------*\
+  #RESET STYLES
+\*-----------------------------------*/
+.bg-gradient { background: linear-gradient(var(--top-gradient), var(--bottom-gradient)); }
+
+.container-bg { background-color: white; }
+
+/*-----------------------------------*\
+  #IMAGE
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+  #ACCORDION
+\*-----------------------------------*/
+
+ .accordion {
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-border-color: none; /* border color */
+    --bs-accordion-btn-bg: none; /* accordion arrow button */
+    --bs-accordion-active-bg: none; /* FOR WHEN OPEN */
+}
