@@ -26,11 +26,21 @@
 
 .container-bg { background-color: white; }
 
-.h-100 { height: 90vh !important; }
+.h-100 { 
+  height: 100vh !important; 
+  width: 100%;
+}
 
-.spacing {
-  width: 80%;
+.w-9 {
+  width: 95%;
   margin: 10vh auto 0;
+}
+
+@media screen and (min-width: 1000px){
+  .w-lg-89 { 
+    width: 85%; 
+    padding: 3rem;
+  }
 }
 
 .position { position: relative; }
@@ -55,8 +65,24 @@
 \*-----------------------------------*/
 
  .accordion {
-    --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-border-color: none; /* border color */
-    --bs-accordion-btn-bg: none; /* accordion arrow button */
-    --bs-accordion-active-bg: none; /* FOR WHEN OPEN */
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-border-color: none; 
+  --bs-accordion-btn-bg: none; 
+  --bs-accordion-active-bg: none; 
 }
+
+.accordion-button::after {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(57%) saturate(2927%) hue-rotate(342deg) brightness(101%) contrast(101%);
+}
+
+.accordion-button:hover {
+  color: var(--hover-color);
+}
+
+/* 2. Bold font for active (open) accordion buttons */
+.accordion-button:not(.collapsed) {
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+.accordion-item { border-bottom: 2px solid var(--divider); }
