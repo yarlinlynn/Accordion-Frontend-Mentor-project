@@ -14,61 +14,62 @@
   --divider: hsl(240, 5%, 91%);
 }
 
-/*-----------------------------------*\
-  #RESET STYLES
-\*-----------------------------------*/
 .bg-gradient { 
   background: linear-gradient(var(--top-gradient), var(--bottom-gradient)) !important; 
   background-repeat: no-repeat !important;
 }
 
-.custom-m { margin: 30vh auto; }
-
-.container-bg { background-color: white; }
-
-.h-100 { 
-  height: 100vh !important; 
-  width: 100%;
-}
-
-.w-9 {
-  width: 95%;
-  margin: 10vh auto 0;
-}
-
-@media screen and (min-width: 1000px){
-  .w-lg-89 { 
-    width: 85%; 
-    padding: 3rem;
-  }
-}
-
-.position { position: relative; }
-
-.position-1 { position: absolute; }
-
-.img-postion {
-  width: 100%;
-  position: relative;
+main {
+  background: var(--bs-carousel-caption-color);
+  width: 90%;
+  max-width: 56rem;
+  display: grid;
+  place-content: center;
+  margin: 15rem auto;
+  padding: 0 1rem 2rem;
 }
 
 /*-----------------------------------*\
-  #IMAGE
+  #IMAGES
 \*-----------------------------------*/
 
-.img-width { width: 200%;}
+.img-container {
+  position: relative;
+}
 
-.align { align-items: center; }
+.mobile-img {
+  background-image: url(/assets/images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 14rem;
+  background-position: 50% top;
+    /* position: relative; */
+}
+
+.mobile-img img {
+  width: 100%;
+  height: auto;
+  max-width: 15rem;
+  display: block;
+  position: relative;
+  bottom: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /*-----------------------------------*\
   #ACCORDION
 \*-----------------------------------*/
 
- .accordion {
+.accordion-container {
+  margin-top: -3rem;
+}
+
+.accordion {
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-border-color: none; 
   --bs-accordion-btn-bg: none; 
   --bs-accordion-active-bg: none; 
+  --bs-accordion-bg: transparent;
 }
 
 .accordion-button::after {
@@ -79,10 +80,66 @@
   color: var(--hover-color);
 }
 
-/* 2. Bold font for active (open) accordion buttons */
 .accordion-button:not(.collapsed) {
   color: var(--heading-color);
   font-weight: 700;
 }
 
 .accordion-item { border-bottom: 2px solid var(--divider); }
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media screen and (min-width: 500px) {
+  .mobile-img { background-size: 21rem; }
+
+  .mobile-img img {
+    max-width: 20rem;
+    bottom: 8rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main { 
+    grid-template-columns: 1fr 1fr; 
+    padding-top: 4rem;
+    padding-left: 0;
+    margin: 12rem auto;
+  }
+
+  .img-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .desktop-img {
+    background-image: url(/assets/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -7rem -7rem;
+    position: relative;
+  }
+
+  .desktop-img img:first-child {
+    transform: translate(-7rem, -3rem);
+  }
+
+  .card-box {
+    position: absolute;
+    left: -2.6rem;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    width: 35%;
+  }
+
+  .accordion-container { 
+    width: 100%; 
+    margin-top: 0;
+  }
+
+  h1 { margin-top: 2rem; }
+}
